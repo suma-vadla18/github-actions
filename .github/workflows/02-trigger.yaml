@@ -1,8 +1,16 @@
 name: Triggers
 on: 
-  push:
+  # if someone opens PR to main branch
+  pull_request:
+    types: [opened, reopened]
     branches:
-      - 'main'
+      - 'releases/**'
+  # push:
+  #   branches:
+  #     - 'main'
+  # workflow_dispatch
+  # [push] # Triggers the workflow on every push to the repository
+
 
 jobs:
   # Job name
@@ -11,53 +19,5 @@ jobs:
     steps:
       # - name: Manual dispatch
       #   run: echo "manually dispatched" # The command to execute
-      - name: manual dispatch
-        run: echo "manually dispatched"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# name: Triggers
-# on: 
-#   # if someone opens PR to main branch
-#   pull_request:
-#     types: [opened, reopened]
-#     branches:
-#       - 'releases/**'
-#   # push:
-#   #   branches:
-#   #     - 'main'
-#   # workflow_dispatch
-#   # [push] # Triggers the workflow on every push to the repository
-
-
-# jobs:
-#   # Job name
-#   trigger:
-#     runs-on: ubuntu-latest # Github hosted runners
-#     steps:
-#       # - name: Manual dispatch
-#       #   run: echo "manually dispatched" # The command to execute
-#       - name: feature branch push
-#         run: echo "main branch push"
+      - name: feature branch push
+        run: echo "main branch push"
