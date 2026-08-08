@@ -6,4 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
        - name: print info
-         run: echo "${{ toJson(github) }}"
+         run: |
+           echo "${{ toJson(github) }}"
+           echo "branch name: ${{ github.ref_name }}"
+         
