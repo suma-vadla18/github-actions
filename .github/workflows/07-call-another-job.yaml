@@ -3,7 +3,7 @@ on: [push] # Triggers the workflow on every push to the repository
 jobs:
   # Job name
   feature-pipeline:
-    uses: suma-vadla18/workflows/.github/workflows/nodejs-feature-pipeline.yaml@main
+    uses: suma-vadla18/workflows/.github/workflows/test.yaml@main
     with:
       project: 'roboshop'
       component: 'catalogue'
