@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest # Github hosted runners
     steps:
        - name: Greet the world
-         run: "Hello, world!" # The command to execute
+         run: echo "Hello, world!" # The command to execute
