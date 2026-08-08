@@ -1,0 +1,11 @@
+name: self hosted
+on: [push] # Triggers the workflow on every push to the repository
+
+
+jobs:
+  # Job name
+  self-hosted:
+    runs-on: self-hosted
+    steps:
+      - name: Greet the world 
+        run: echo "Hello, from self hosted runner!" # The command to execute
